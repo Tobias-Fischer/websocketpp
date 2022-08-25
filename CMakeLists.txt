@@ -40,11 +40,7 @@ endif()
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 set(INSTALL_INCLUDE_DIR include CACHE PATH "Installation directory for header files")
-if (WIN32 AND NOT CYGWIN)
-  set (DEF_INSTALL_CMAKE_DIR cmake)
-else ()
-  set (DEF_INSTALL_CMAKE_DIR lib/cmake/websocketpp)
-endif ()
+set (DEF_INSTALL_CMAKE_DIR lib/cmake/websocketpp)
 set (INSTALL_CMAKE_DIR ${DEF_INSTALL_CMAKE_DIR} CACHE PATH "Installation directory for CMake files")
 
 # Make relative paths absolute (needed later on)
